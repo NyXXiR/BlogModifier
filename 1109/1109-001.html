@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script>
+      const count = {};
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          const num = "<td>" + (i * 5 + (j + 1) + "</td>");
+          console.log(num);
+        }
+      }
+
+      let num = 1;
+      let t = "<table border='1'>";
+      for (let i = 0; i < 5; i++) {
+        t += "<tr>";
+        for (let k = 0; k < 5; k++) {
+          const number = "<td>" + num + "</td>";
+          t += number;
+          num++;
+        }
+        t += "</tr>";
+      }
+      t += "</table>";
+      document.write(t);
+    </script>
+    <style>
+      table {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<!---
+  객체의 종류
+  1. 내장객체: Math(수학객체), String(문자객체), Date(날짜객체), 배열객체
+  2. 브라우저 객체 모델(BOM): window, screen, history, navigator
+  3. 문서객체 모델(DOM): HTML의 문서구조 html
+
+
+
+
+Math:
+abs 절댓값
+min/max 최소/최대
+pow 제곱
+random 0과 1사이의 난수를 발생시킴
+round ceil floor 반올림 올림 내림
+PI 원주율 상수
+-->

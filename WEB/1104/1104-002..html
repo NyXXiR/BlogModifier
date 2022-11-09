@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이디 선택자 사용법</title>
+    <style>
+      #wrapper {
+        width: 1200px;
+        /* 100vh: 길이 전체를 먹겠다는 의미 */
+        height: 100vh;
+        margin: 0 auto;
+        border: 1px solid black;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      /* 이 순서대로 넣어야 함 lvha(바꿔도 작동하긴 하는데 룰 같은 것인듯) */
+      a:link {
+        width: 100px;
+        height: 50px;
+        border: 2px solid red;
+        padding: 2px;
+        display: inline-block;
+        margin: 6px;
+        color: skyblue;
+      }
+      a:visited {
+        color: none;
+        /* 한 번 이상 방문했던 링크 부분 */
+      }
+      a:hover {
+        text-decoration: none;
+        /* 마우스를 오버했을 때 반응 */
+      }
+      a:active {
+        color: red;
+        /* 링크를 클릭하는 순간 */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="wrapper">
+        <a href="#">링크1</a>
+        <!-- <a href="#">링크2</a>
+        <a href="#">링크3</a>
+        <a href="#">링크4</a>
+        <a href="#">링크5</a> -->
+      </div>
+    </div>
+  </body>
+</html>

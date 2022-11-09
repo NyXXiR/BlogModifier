@@ -1,0 +1,13 @@
+p {
+    color: #888888;
+    font-size: 18px;
+
+    font-weight: 400;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+
+    /* 선의 종류: solid-실선, dashed-점선, dotted- 동그라미 선*/
+    border: 20px solid pink;
+    text-shadow: 2px 2px 3px pink;
+    box-shadow: 2px 2px 3px black;
+  }

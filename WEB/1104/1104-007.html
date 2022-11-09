@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 depth menu</title>
+    <style>
+      .cls001 {
+        /* 리스트에 붙는 1. 따위의 서식을 없앰 */
+        list-style: none;
+        /* margin, padding 0을 주어야 줄바꿈 서식이 없어진다. */
+        margin: 0;
+        padding: 0;
+      }
+      /* 자식요소를 select하려면 >를 사용한다. */
+      .cls001 > li {
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid black;
+        text-align: center;
+        float: left;
+      }
+      .cls001 li ul {
+        /* 맨 앞 ul과 같은 스타일 적용, 그러면 2depth 메뉴의 정렬이 맞춰진다. */
+        list-style: none;
+        margin: -1px;
+        padding: 0;
+      }
+      .cls001 li ul li {
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid black;
+        text-align: center;
+        display: none;
+      }
+      .cls001 li:hover ul li {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="cls001">
+      <li>
+        HTML
+        <ul>
+          <li>HTML-1</li>
+          <li>HTML-2</li>
+          <li>HTML-3</li>
+        </ul>
+      </li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>jQuery</li>
+      <li>Porfolio</li>
+    </ul>
+  </body>
+</html>

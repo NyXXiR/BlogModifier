@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>풀비디오</title>
+    <style>
+      video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+      p {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        border: 1px solid black;
+        background: red;
+        color: black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <video src="Beach.mp4" autoplay muted loop></video>
+      <p>ENTER</p>
+    </div>
+  </body>
+</html>

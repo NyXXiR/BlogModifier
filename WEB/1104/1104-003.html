@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a</title>
+
+    <style>
+      body {
+        background: gray;
+      }
+      #wrapper {
+        width: 800px;
+        height: 100vh;
+        border: 2px solid black;
+        /* 0 auto는 좌우정렬을 의미. 0 auto 0 auto를 줄인 것 */
+        margin: 0 auto;
+
+        /* -webkit-border-radius: 50px; <<를 넣어주면 모던 브라우저에서도 먹는다. */
+        border-radius: 50px;
+      }
+      a {
+        color: black;
+
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        width: 100px;
+        height: 80px;
+        border: 8px;
+        padding: 20px;
+        margin: 0 auto;
+        background: #ccc;
+        box-sizing: border-box;
+        /* border-box라는 속성을 쓰면 width가 고정된다 */
+      }
+      /* before, after: 버튼 만들기 편하게 생긴듯. 일종의 편법인 듯 */
+      /* p::before {
+        content: "";
+        width: 100px;
+        height: 3px;
+        display: block;
+        background: orange;
+        border: 2px solid black;
+      }
+      p::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 30px;
+        background: red;
+        color: white;
+        border: 2px solid black;
+      } */
+      ol li:nth-child(2n-1) {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <a href="#">링크1</a>
+      <p>오늘은 오늘</p>
+    </div>
+
+    <ol>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+    </ol>
+  </body>
+</html>

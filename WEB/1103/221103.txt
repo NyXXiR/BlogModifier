@@ -1,0 +1,17 @@
+설치한 플러그인
+night owl, material icon theme
+
+
+
+*input의 요소들*
+
+*<form> 태그의 요소들*
+
+*저작권 관련*
+웹폰트용 폰트 포맷
+worr(web open font format)
+eot(embeded open type)
+
+*CSS 작성규칙*
+1.가급적 소문자로 작성
+2. 속성: 속성값;(html에서는 속성="속성값"이었음)

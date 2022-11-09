@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>윈도우 객체</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      map {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <img src="apple.png" alt="" usemap="#intro" alt="사과" />
+      <map name="intro" id="intro">
+        <area shape="rect" coords="0,0,100,100" href="#" alt=""
+        onclick="window.close();"" />
+      </map>
+    </p>
+  </body>
+</html>

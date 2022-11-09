@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>happy friday</title>
+    <style>
+      body {
+        height: 10000px;
+      }
+      .cls001 {
+        width: 150px;
+        height: 150px;
+        border: 2px solid red;
+        border-radius: 50%;
+      }
+      .circle {
+        width: 50px;
+        height: 50px;
+        border: 2px solid dodgerblue;
+        border-radius: 50%;
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+        position: fixed;
+      }
+      i {
+        font-size: 40px;
+        color: rgb(59, 59, 59);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/1d0b610a69.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1 class="cls001"><a href="#return">return</a></h1>
+    <h1 class="cls001"><a href="#exchange">exchange</a></h1>
+    <h1 class="cls001"><a href="#refund">refund</a></h1>
+    <h1 class="cls001"><a href="#quit">quit</a></h1>
+    <p id="return">
+      반품 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet,
+      hic blanditiis natus placeat consectetur est nesciunt voluptatibus nam
+      adipisci, consequatur voluptas, error ipsam quod minima ut ipsum tempore
+      sapiente laboriosam!
+    </p>
+    <p id="exchange">
+      교환 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet,
+      hic blanditiis natus placeat consectetur est nesciunt voluptatibus nam
+      adipisci, consequatur voluptas, error ipsam quod minima ut ipsum tempore
+      sapiente laboriosam!
+    </p>
+    <p id="refund">
+      환불Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, hic
+      blanditiis natus placeat consectetur est nesciunt voluptatibus nam
+      adipisci, consequatur voluptas, error ipsam quod minima ut ipsum tempore
+      sapiente laboriosam!
+    </p>
+    <p id="quit">
+      탈퇴 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet,
+      hic blanditiis natus placeat consectetur est nesciunt voluptatibus nam
+      adipisci, consequatur voluptas, error ipsam quod minima ut ipsum tempore
+      sapiente laboriosam!
+    </p>
+
+    <div class="circle"><i class="fa-brands fa-apple"></i></div>
+  </body>
+</html>
+
+<!-- 
+스타일 적용 우선순위
+0. !important(우선순위 높음) 
+1. 인라인 스타일 시트 
+2. 내부 스타일 시트
+3. 외부 스타일 시트 -->
+
+<!-- 
+<style>에서 어려운 부분
+1. position
+2. display
+3. :before, :after 가상요소 -->
+<!-- 
+1. 태그 선택자
+2. 아이디 선택자 >> 딱 한 번만 적용시킬 때 사용
+3. 클래스 선택자 >> 똑같은 부분이 여러 군데일 때  -->
+
+<!-- wrap, wrapper, container라는 단어를 많이 쓰게 된다. -->
+<!-- 
+display의 종류
+1. inline
+> inline 태그는 width와 height를 가질 수 없다.(padding은 받는다)
+2. block
+3. inline-block >> block이지만 한 줄을 다 먹지 않고 한 줄에 여러 개 배치 가능
+
+4. flex -->
+
+<!-- 
+webkit 방식 브라우저: 크롬, 사파리
+벤더 프리픽스/프리픽스 방식 브라우저: 오페라
+moz = 파이어폭스(모질라)
+
+1. 최신 모던 브라우저(chrome)
+2. 모던 브라우저(업데이트가 중단된, 버전이 낮은 브라우저)
+3. 구형 브라우저(internet explorer) -->
+
+<!-- 
+  포지션의 종류 
+   fixed 
+   absolute > 기준값 브라우저 화면, 하지만 초기 자리에만 있어서 이동하지 않음
+   relative
+
+   >>  부모 요소나 조상 요소 중에서 relative를 가지고 있고 그의 자식 요소나 손자요소가 absolute의 포지션 속성을 가지고 있다면 해당 absolute 요소의 기준값은 relative가 된다.
+
+
+딩뱃 폰트: 타이핑을 하면 도형이 입력되는 폰트
+
+
+-->
