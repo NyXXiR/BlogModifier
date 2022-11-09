@@ -42,6 +42,7 @@
         width: 100%;
         display: block;
         transition: top 0.3s;
+        opacity: 0.5;
       }
 
       #navbar a {
@@ -52,7 +53,6 @@
         padding: 15px;
         text-decoration: none;
         font-size: 17px;
-        opacity: 0;
       }
 
       #navbar a:hover {
@@ -61,60 +61,42 @@
       }
     </style>
   </head>
+
   <body>
     <div id="navbar">
-      <a href="#">Home</a>
-      <a href="#">News</a>
-      <a href="#">Contact</a>
+      <a href="#" id="logo">Company LOGO</a>
+      <div id="navbar-right">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+      </div>
     </div>
 
-    <div style="padding: 15px 15px 5000px">
-      <p>
-        b Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque harum
-        eaque nobis voluptate dolorem est unde atque nesciunt temporibus id
-        earum, accusantium dicta iste consectetur error. Porro doloremque rerum
-        laborum.
-      </p>
+    <div style="padding: 15px 15px 2500px; font-size: 30px">
+      <span
+        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ducimus
+        omnis vero vel nisi? Eaque vero, sunt asperiores ipsam illo tenetur
+        debitis. Odio nihil omnis excepturi tenetur minus quas nam!</span
+      >
     </div>
+
     <script>
-      console.log(document.querySelectorAll("#navbar a"));
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
       const setNavbar = document.getElementById("navbar").style;
-      function scrollFunction() {
+      const setLogo = document.getElementById("logo").style;
+      window.onscroll = function scrollFunction() {
         if (
-          document.documentElement.scrollTop > 20 &&
-          document.documentElement.scrollTop < 1000
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
         ) {
-          setNavbar.top = "0";
-          setNavbar.height = "50px";
+          setNavbar.padding = "30px 10px";
           setNavbar.transition = "0.3s";
-        } else if (document.documentElement.scrollTop > 1000) {
-          setNavbar.height = "300px";
+          setLogo.fontSize = "25px";
+        } else {
+          setNavbar.padding = "80px 10px";
           setNavbar.transition = "0.3s";
-          document.querySelectorAll("#navbar a").style.fontSize = "5000px";
-        } else {
-          setNavbar.top = "-300px";
+          setLogo.fontSize = "35px";
         }
-
-        const mybutton = document.getElementById("myBtn");
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
+      };
     </script>
-    <button onclick="topFunction()" id="myBtn">T.O.P</button>;
   </body>
 </html>
