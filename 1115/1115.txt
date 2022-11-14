@@ -1,0 +1,51 @@
+1. 유저가 값을 입력
+
+2. +버튼을 누르면 할 일이 추가된다
+
+3. delete 버튼을 누르면 할 일이 삭제된다.
+
+4. check 버튼을 누르면 할 일이 끝나면서 가운데줄(line through)이 그어진다.
+
+5. on progress, done 탭을 누르면 할 일이 끝나면서 언더바가 이동한다.
+
+6. 끝남 탭은 끝난 아이템만, 진행중 탭은 진행중 아이템만 보여준다.
+
+7. 전체 탭을 누르면 다시 전체 아이템으로 돌아온다.
+
+
+끔---찍
+
+
+const uniqueId=Math.random().toString(36).substr(2,9);
+
+
+function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
+console.log(uuidv4());
+
+function genID() {
+    return Math.random().toString(36).substr(2)
+        + Math.random().toString(36).substr(2)
+        + Math.random().toString(36).substr(2)
+        + Math.random().toString(36).substr(2);
+}
+
+
+
+slice(0,4).show();
+특정 요소를 클릭했을 때 (그 요소의 :hidden).slice(0,4)slidedown()
+if(특정요소의 length가 0과 같다면 class nocontent를 발동
+
+
+
+
+플렉스를 슬라이스해서 보여주면 될듯
+
+.content일 때 display none
+#loadMore일 때 블록으로 변환
+
+
