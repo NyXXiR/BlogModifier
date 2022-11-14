@@ -1,3 +1,5 @@
 offset().top : 절대 위치값(브라우저 최상단 기준)
 
 position().top : 상대 위치값
+
+window 속성

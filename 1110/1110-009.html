@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Read</title>
+    <style>
+      .moreLess {
+        width: 100px;
+        height: 60px;
+      }
+      .content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
+      laboriosam optio enim sapiente nostrum quos asperiores voluptate ex modi
+      dolorem accusam us, quasi adipisci. Omnis facilis aliquam quasi commodi
+      doloribus ipsa. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Facilis labori osam optio enim sapiente nostrum quos asperiores voluptate
+      ex modi dolorem accusamus, quasi adipisci. Omnis facilis aliquam quasi
+      commodi doloribus ipsa. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Facilis laboriosam optio enim sapiente nostrum quos
+      asperiores voluptate ex modi dolorem accusamus, quasi adipisci. Omnis
+      facilis aliquam quasi commodi doloribus ipsa. Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Facilis laboriosam optio enim sapiente
+      nostrum quos asperiores voluptate ex modi dolorem accusamus, quasi
+      adipisci. Omnis facilis aliquam quasi commodi doloribus ipsa. Lorem ipsum,
+      dolor sit amet consectetur adipisicing elit. Facilis laboriosam optio enim
+      sapiente nostrum quos asperiores voluptate ex modi dolorem accusamus,
+      quasi adipisci. Omnis facilis aliquam quasi commodi doloribus ipsa. Lorem
+      ipsum, dolor sit amet consectetur adipisicing elit. Facilis laboriosam
+      optio enim sapiente nostrum quos asperiores voluptate ex modi dolorem
+      accusamus, quasi adipisci. Omnis facilis aliquam quasi commodi doloribus
+      ipsa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
+      laboriosam optio enim sapiente nostrum quos asperiores voluptate ex modi
+      dolorem accusamus, quasi adipisci. Omnis facilis aliquam quasi commodi
+      doloribus ipsa. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Facilis laboriosam optio enim sapiente nostrum quos asperiores voluptate
+      ex modi dolorem accusamus, quasi adipisci. Omnis facilis aliquam quasi
+      commodi doloribus ipsa. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Facilis laboriosam optio enim sapiente nostrum quos
+      asperiores voluptate ex modi dolorem accusamus, quasi adipisci. Omnis
+      facilis aliquam quasi commodi doloribus ipsa.
+    </div>
+
+    <input
+      type="button"
+      class="moreLess"
+      value="read more"
+      onclick="{setReadButton()}"
+    />
+  </body>
+  <script>
+    const R = document.querySelector(".content");
+    console.log(R);
+    function setReadButton() {
+      R.classList.toggle("content");
+    }
+  </script>
+</html>

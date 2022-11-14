@@ -1,0 +1,8 @@
+토글 버튼
+다크 모드
+
+setAttribute(속성명, 속성값)
+img 태그 내의 src 등을 바꿀 수 있다.
+
+getModifierState
+키보드 캡스락 등의 변화감지가능

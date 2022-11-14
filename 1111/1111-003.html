@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      body {
+        margin: 20px;
+        padding: 20px;
+        line-height: 1;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1em;
+        background-color: #f1f1f1;
+        color: #555;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .title {
+        margin: 0;
+        margin-bottom: 35px;
+        padding: 0;
+        font-size: 1.5em;
+        font-weight: 300;
+        color: #555;
+      }
+      .container {
+        margin-top: 35px;
+        min-width: 440px;
+      }
+      .controller {
+        padding-top: 20px;
+      }
+      .controller li {
+        display: inline-block;
+        margin-left: 8px;
+      }
+      .controller li:first-child {
+        margin-left: 0;
+      }
+      .controller li a {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid black;
+        transition: all 0.3s;
+      }
+      .controller li.on a {
+        width: 50px;
+        background-color: #8ac007;
+      }
+      .picture {
+        position: relative;
+        margin-top: 30px;
+        width: 400px;
+        height: 400px;
+        /* overflow: hidden; */ /* 수정 */
+      }
+      .picture ul {
+        /* position: absolute; */ /* 수정 */
+        /* left: 0; */ /* 수정 */
+        /* top: 0; */ /* 수정 */
+        margin: 0;
+        padding: 0;
+        width: 2400px;
+        list-style: none;
+        transition: opacity 0.4s; /* 수정 */
+      }
+      .picture li {
+        position: absolute; /* 수정 */
+        left: 0; /* 수정 */
+        top: 0; /* 수정 */
+        width: 400px;
+        height: 400px;
+        opacity: 0; /* 수정 */
+        transition: opacity 0.4s; /* 수정 */
+      }
+      .picture img {
+        max-width: 100%;
+        height: auto;
+      }
+      .picture li.active {
+        /* 수정 */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Hi 1111</h1>
+    <ul class="controller">
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+
+    <div class="picture">
+      <ul>
+        <li><img src="images/work1.jpg" /></li>
+        <li><img src="images/work2.jpg" /></li>
+        <li><img src="images/work3.jpg" /></li>
+        <li><img src="images/work4.jpg" /></li>
+        <li><img src="images/work5.jpg" /></li>
+        <li><img src="images/work6.jpg" /></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    const ContLi = document.querySelectorAll(".controller li");
+
+    console.log(ContLi);
+    $(function () {
+      let n = 0;
+      $(ContLi).click(function (e) {
+        e.preventDefault();
+        $(ContLi).removeClass("on");
+        $(this).addClass("on");
+
+        n = $(this).index();
+        $(".picture li").removeClass("active");
+        $(".picture li").eq(n).addClass("active");
+      });
+    });
+  </script>
+</html>
+
+<!--
+인라인 블록을 많이 만들고 
+
+이미지를 겹쳐둔다
+
+.picture li 의 opacity가 0이고 li.active가 되면 1이 된다
+
+
+
+-->

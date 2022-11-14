@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1d0b610a69.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .fa-solid {
+        font-size: 300px;
+      }
+      .fa-solid:hover {
+        background: blue;
+        transition: 0.3s;
+      }
+
+      .dislike {
+        transform: rotateX(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="likeSwitch" onclick="{setThumbState()}">
+      <i class="fa-solid fa-thumbs-up"></i>
+    </button>
+  </body>
+
+  <script>
+    const a = document.querySelector(".fa-solid");
+
+    function setThumbState() {
+      a.classList.toggle("dislike");
+    }
+
+    // const menu = ["된장찌개", "짜장면", "돈가스", "김치찌개", "군만두"];
+    // const todayMenu = menu[Math.floor(Math.random() * menu.length)];
+    // document.write(todayMenu);
+
+    // let phoneNum = "010-4421-2367";
+    // let result_1 = phoneNum.substring(phoneNum.length - 4, 0);
+    // document.write(result_1, "**** <br>");
+  </script>
+</html>
