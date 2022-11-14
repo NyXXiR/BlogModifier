@@ -1,0 +1,96 @@
+git config --global user.name 이름입력
+git config --global user.email 메일주소입력
+
+---로그인하게 됨---
+
+
+
+git init
+
+git add .
+
+git commit -m "first commit"
+
+
+git status
+
+git remote add origin https://github.com/NyXXiR/1114.git
+: 해당 리포지터리와 연결시켜주는 명령어
+
+gir push origin master
+
+깃허브에 파일을 올리는 것 >> 호스팅
+netlify: 도메인을 달아주는 역할을 하는 사이트
+
+파일 추가로 올릴 때
+
+git add.
+
+git commit -m "멘트"
+
+git push origin master
+
+
+git checkout -b 폴더명
+-b는 branch를 의미. 
+
+branch master는 네이버의 메인 페이지 같은 느낌
+branch나부랭이가 메인을 바꾸면 큰일나겠죠
+
+rm -rf .git (마스터 바꾸는 의미 같음 > master에서 잠깐 벗어나게 됨)
+
+브랜치는 마스터 브랜치에 접근 못함. 마스터가 컨펌해줘야 올릴 수 있음
+
+git clone 주소명 (폴더)
+
+
+
+리퀴드 언어는 3가지 메인 컴포넌트로 이뤄져 있다.
+
+objects: 미리 설정된 콘텐츠를 페이지에 출력하게끔 리퀴드에 말해준다.
+{{}}로 사용. 
+ex) {{page.title}}은  page.title을 호출한다.
+
+
+tags
+템플릿을 위한 논리, 제어문을 정의한다. {% %}로 사용한다.
+{% if page.show_sidebar %}
+  <div class="sidebar">
+    sidebar content
+  </div>
+{% endif %}
+
+해당 코드는 show_sidebar 페이지의 변수가 true일 때 sidebar를 display한다.
+
+filters
+필터는 리퀴드 오브젝트의 출력(output)을 바꾼다. output 사이에 들어가며 |로 분리한다.
+
+{{ "hi" | capitalize}} 를 하면 앞 문자가 H로 바뀌어서 Hi가 된다.
+
+지킬이 네 변화를 process하게 하려면 front matter를 페이지 앞에 사용해야 한다.
+
+---
+입력
+---
+
+include는 컨텐츠에서 반복되는 내용을 추가하기에 좋다.
+
+
+Data files는 콘텐츠와 소스코드를 분리하게 해줘서 사이트 유지를 쉽게 해준다.
+
+site.posts << 중요
+site.data.navigation
+
+
+
+https://jekyllrb.com/docs/step-by-step/09-collections/
+이 페이지 참고해야 카테고리 만들 수 있음
+
+
+고쳐야 할 것
+
+맨 앞 페이지 excerpt 였나 활용해서 새로 만들고
+카테고리별 페이지를 default 페이지 참고해서 같은 카테고리 게시물만 나열되는 방식으로 변경
+
+
+
