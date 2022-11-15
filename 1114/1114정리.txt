@@ -89,8 +89,7 @@ https://jekyllrb.com/docs/step-by-step/09-collections/
 
 고쳐야 할 것
 
-맨 앞 페이지 excerpt 였나 활용해서 새로 만들고
-카테고리별 페이지를 default 페이지 참고해서 같은 카테고리 게시물만 나열되는 방식으로 변경
+카테고리별 페이지를 default 페이지 참고해서 같은 카테고리 게시물만 나열되는 방식으로 변경 // 된거같음
 
 
 

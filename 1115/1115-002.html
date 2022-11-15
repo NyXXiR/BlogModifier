@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to use Method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      .txt1 {
+        background: red;
+      }
+      .txt2 {
+        background: dodgerblue;
+      }
+    </style>
+    <script>
+      $(function () {
+        $(".btn1").on("click, focus", function () {
+          $(".txt1").animate(
+            {
+              marginLeft: "500px",
+              fontSize: "30px",
+            },
+            2000,
+            function () {
+              alert("모션완료");
+            }
+          );
+        });
+
+        $(".btn2").on("click", function () {
+          $(".txt2").animate(
+            {
+              marginLeft: "+=50px",
+            },
+            500
+          );
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <p><button class="btn1">버튼1</button></p>
+    <span class="txt1">"500px" 이동</span>
+    <p><button class="btn2">버튼2</button></p>
+    <span class="txt2">"50px"씩 이동</span>
+  </body>
+</html>
+
+<!--() 단항연산자 산술연산자 비교연산자 논리연산자 대입연산자
+
+사각형 모양으로 움직이는 블록을 만들어야 함
+-->

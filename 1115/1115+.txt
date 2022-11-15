@@ -1,0 +1,39 @@
+모바일 모드로 가면 메뉴  튕겨올라가면서 사라진다
+
+메뉴 아이콘 클릭하면 드르륵 내려오고 올라감
+
+
+
+세로를 채우려면
+
+
+오버플로우 히든이니깐
+
+위로올림?
+
+
+
+toggle 활용
+
+
+메뉴를 클릭하면
+> header .mobile_tab에  .close class 부여(x표로 바뀜)
+>toggle 발동해서 header nav ul에 .show가 추가됨.
+
+
+블로그 설명을 잘 하려면
+
+나눠서 설명한 부분을 스스로 적용할 수 있게 하면서
+
+스텝바이스텝으로 따라해도 가능해야 한다.
+
+목표 설정(카테고리별로 포스트 업로드)
+
+지킬 유용한 기능들
+https://jekyllrb-ko.github.io/docs/liquid/filters/
+
+
+
+문법 html
+
+<element data-* ="somevalue">
