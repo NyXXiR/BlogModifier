@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pictures {
+        transition: 0.5s;
+        clear: both;
+      }
+      #picture {
+        transition: 0.5s;
+        clear: both;
+      }
+
+      .image-container {
+        background: url(images/work1.jpg) no-repeat;
+        background-size: contain;
+
+        padding: 300px;
+        left: 0;
+
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 그림을 매 시간마다 다른 그림이 나오게 만들기 그림 하나가 생기고 그림 하나가
+    사라지고 내부의 <img src=""를 setTimeout setInterval로 하면 되겠다 1 2 3 4 1
+    2 3 4 순서로 반복 
+체인지픽쳐는 img src 내부의 work [n].jpg의 값을 1씩 늘린다
+n이 6이 되면 
+
+.image-container의 백그라운드 이미지를 바꾼다
+숫자를 1씩 늘리는데 6이 되면 다시 1로 바꾼다.
+
+-->
+
+    <div class="image-container"></div>
+  </body>
+  <script>
+    var n = 1;
+    function changePicture() {
+      var selectedPicture = document.querySelector(".image-container");
+      selectedPicture.style.cssText =
+        "background: url(images/work" + n + ".jpg) no-repeat";
+
+      n++;
+
+      if (n == 6) {
+        n = 1;
+      }
+    }
+
+    setInterval(() => changePicture(), 2000);
+  </script>
+</html>
