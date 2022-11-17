@@ -1,5 +1,6 @@
 let taskInput = document.querySelector("#task-input");
 let addButton = document.querySelector("#add-button");
+let tabs = document.querySelectorAll("#task-tabs div");
 
 var taskList = [];
 
@@ -36,7 +37,7 @@ function render() {
         <div>${taskList[i].taskContent}</div>
         <div>
           <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-          <button id="delete-button">Delete</button>
+          <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
         </div>
       </div>
       `;
@@ -61,12 +62,12 @@ function toggleComplete(id) {
   console.log(taskList);
 }
 
-function deleteTask() {}
-
-// let deleteButton = document.querySelector("#delete-button");
-
-// deleteButton.addEventListener("click", deleteProcess);
-
-// function deleteProcess() {
-//   asdf;
-// }
+function deleteTask(id) {
+  for (let i = 0; i < taskList.length; i++) {
+    if (taskList[i].id == id) {
+      taskList.splice(i, 1);
+      break;
+    }
+  }
+  render();
+}

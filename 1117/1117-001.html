@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <style>
+      .slideshow {
+        overflow: hidden;
+        position: relative;
+        min-width: 960px;
+        height: 465px;
+      }
+      .slideshow img {
+        display: none;
+        position: absolute;
+        left: 50%;
+        margin-left: -800px;
+      }
+
+      /* JavsScript 비활성화 시 */
+      .no-js .slideshow img:first-child {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero-header">
+      <div class="inner">
+        <div class="slideshow">
+          <img src="images/work1.jpg" alt="" />
+          <img src="images/work2.jpg" alt="" />
+          <img src="images/work3.jpg" alt="" />
+          <img src="images/work4.jpg" alt="" />
+        </div>
+      </div>
+    </header>
+    <script>
+      $(function () {
+        $(".slideshow").each(function () {
+          let $slides = $(this).find("img"),
+            slideCount = $slides.length,
+            currentIndex = 0;
+
+          $slides.eq(currentIndex).fadeIn();
+
+          setInterval(showNextSlide, 1000);
+
+          function showNextSlide() {
+            let nextIndex = (currentIndex + 1) % slideCount;
+
+            $slides.eq(currentIndex).fadeOut();
+            $slides.eq(nextIndex).fadeIn();
+
+            currentIndex = nextIndex;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
