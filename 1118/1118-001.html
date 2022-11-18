@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .header .navbar {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: left;
+        margin-left: 15%;
+        clear: right;
+
+        margin-top: 10px;
+      }
+      .header .navbar li {
+        float: left;
+        width: 140px;
+        margin-right: 5px;
+      }
+
+      .header .navbar li a {
+        display: block;
+        padding: 15px 0;
+        width: 120px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.875em;
+        background: black;
+        color: white;
+      }
+
+      .header .navbar li a:hover {
+        color: red;
+      }
+      .header .navbar li ul {
+        display: none;
+        position: absolute;
+        width: 250px;
+      }
+      .header .navbar li:hover ul {
+        display: block;
+      }
+      .header .navbar li ul li {
+        border: 1px solid black;
+        padding: 10px;
+        margin-right: 15px;
+        margin-top: 10px;
+
+        display: block;
+        text-decoration: none;
+      }
+      .header .navbar li ul li:first-child {
+        border-top: none;
+      }
+
+      .header .navbar li ul li a {
+        background: #373737;
+        display: block;
+        padding: 10px 14px;
+      }
+      .header .login {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: right;
+        margin-right: 10%;
+        margin-top: 10px;
+      }
+      .login li {
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        float: right;
+        margin: right 20%;
+      }
+      .login li:hover {
+        color: red;
+      }
+
+      .masterWrapper {
+        height: 120px;
+        width: 100%;
+        top: 0;
+        background: black;
+        position: fixed;
+        z-index: 9999;
+      }
+      .siteName {
+        display: flex;
+        margin-left: 10%;
+        color: white;
+      }
+      h2 {
+        font-size: 50px;
+      }
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+      }
+
+      #myBtn:hover {
+        background-color: #555;
+      }
+    </style>
+    >
+  </head>
+  <body>
+    <header>
+      <div class="masterWrapper">
+        <div class="siteName"><h2>이메일샐러드</h2></div>
+
+        <div class="header">
+          <ul class="navbar">
+            <li>
+              <a href="#">메뉴1</a>
+              <ul>
+                <li>서브1</li>
+                <li>서브2</li>
+                <li>서브3</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴2</a>
+              <ul>
+                <li>서브1</li>
+                <li>서브2</li>
+                <li>서브3</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴3</a>
+              <ul>
+                <li>서브1</li>
+                <li>서브2</li>
+                <li>서브3</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴4</a>
+              <ul>
+                <li>서브1</li>
+                <li>서브2</li>
+                <li>서브3</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="login">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <button onclick="topFunction()" id="myBtn">T.O.P</button>
+    </header>
+  </body>
+
+  <script>
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      const mybutton = document.getElementById("myBtn");
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    var Btn = document.querySelector("#myBtn");
+
+    Btn.addEventListener("click", () => {
+      ScrollAni(0);
+    });
+
+    function ScrollAni(moveY) {
+      var speed = 1;
+      var vh = 0;
+      var scrollY = 0;
+
+      var loop = setInterval(function () {
+        vh += speed * -1;
+        scrollY = vh + window.pageYOffset;
+
+        window.scrollTo(0, scrollY);
+
+        //좌표값이 0이 될 ㄱㅇ
+        if (scrollY <= moveY) {
+          clearInterval(loop);
+        }
+      }, 10);
+    }
+  </script>
+</html>
+
+<!-- 
+    만들어야 할 것
+    메뉴 바 + 로그인/회원가입 칸
+
+메뉴 바는 뭐 튀어나오게 만들어두고 2 depth bar
+
+
+로그인/회원가입 버튼
+버튼을 누르면 링크로 간다.
+
+필요한 컴포넌트는
+
+
+메뉴 바 900px
+로그인 150px
+회원가입 150px
+
+
+
+
+
+
+얘가 베이스
+1115-008 마우스 호버하면 색상변경
+
+
+1109-007    스크롤 아래로 내리면 메뉴바 맨위에서 튀어나오게 
+
+
+
+더 할만한 것
+1109-006 fixed top으로 
+1110-004 상단고정 메뉴바가 스크롤 내리면 바에 붙는다.
+
+
+
+필요한 것
+
+각 메뉴바, 로그인, 회원가입 div는 마우스 호버시
+cursor:pointer
+color: red;
+transition:0.2s
+
+
+
+
+
+
+
+h  필요하면  h2 부터 사용
+
+-->
